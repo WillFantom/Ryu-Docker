@@ -17,7 +17,7 @@ RUN apk add --virtual .build-dependencies \
 ENV RYU_BRANCH master
 ENV RYU_TAG v4.30
 ENV HOME /root
-WORKDIR HOME
+WORKDIR /root
 RUN git clone -b ${RYU_BRANCH} https://github.com/osrg/ryu.git && \
     cd ryu && \
     git checkout tags/${RYU_TAG} && \
